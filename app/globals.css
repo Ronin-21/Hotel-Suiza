@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #9A031E;
+  --color-secondary: #F7B538;
+  /* --color-tertiary: #9fffcb; */
+  --color-light: #F3F3F3;
+  --color-dark: #1C1C1C;
+  --font-primary: "Nunito";
+  --font-secondary: "Mulish";
+  --font-title: "Merienda";
+  --font-hero: "Merienda";
+}
+
+#root {
+  min-height: 100dvh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  color: var(--color-dark);
+  font-family: var(--font-primary);
+}
