@@ -1,11 +1,6 @@
-import PagesHero from "@/components/PagesHero";
-
 export default function ReservationsPage() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <PagesHero bgUrl="/default-image.jpg" />
-
       {/* Rooms Section */}
       <section className="px-4 pt-20 pb-40 bg-light">
         <div className="flex flex-col items-center gap-5 mb-20 text-center">

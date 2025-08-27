@@ -11,7 +11,7 @@ import WhatsAppButton from "@/components/WhatsappButton";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
-      <Hero />
+      {/* <Hero /> */}
       <AmenitiesSection />
       <WelcomeSection />
       <GallerySection />

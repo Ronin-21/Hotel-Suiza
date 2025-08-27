@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import { Merienda, Mulish, Nunito } from "next/font/google";
 import "./globals.css";
+import Hero from "@/components/Hero";
 
 const mulish = Mulish({
   variable: "--font-mulish",
@@ -104,6 +105,7 @@ export default function RootLayout({
         className={`${mulish.variable} ${merienda.variable} ${nunito.variable} antialiased min-h-screen bg-white overflow-x-hidden`}
       >
         <Navbar />
+        <Hero />
         {children}
         <Footer />
       </body>

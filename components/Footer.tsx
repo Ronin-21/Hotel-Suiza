@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Facebook,
   Instagram,
@@ -9,15 +11,21 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-const navItems = [
-  { href: "/", label: "Inicio" },
-  { href: "/nosotros", label: "Sobre Nosotros" },
-  { href: "/galeria", label: "Galería" },
-  { href: "/habitaciones", label: "Habitaciones" },
-  { href: "/reservas", label: "Reservar Ahora" },
-];
-
 const Footer = () => {
+  // Función para desplazarse a una sección
+  const scrollToSection = (id: string) => {
+    if (typeof window !== "undefined") {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="py-16 text-white bg-dark">
       <div className="container px-4 mx-auto sm:px-6 lg:px-8 font-secondary">
@@ -60,15 +68,36 @@ const Footer = () => {
           <div>
             <h4 className="mb-4 text-xl font-semibold">Enlaces Rápidos</h4>
             <div className="flex flex-col items-start gap-2">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="transition-colors duration-200 text-light hover:text-secondary"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              <button
+                onClick={scrollToTop}
+                className="transition-colors duration-200 text-light hover:text-secondary cursor-pointer"
+              >
+                Inicio
+              </button>
+              <button
+                onClick={() => scrollToSection("galeria")}
+                className="transition-colors duration-200 text-light hover:text-secondary cursor-pointer"
+              >
+                Galería
+              </button>
+              <button
+                onClick={() => scrollToSection("servicios")}
+                className="transition-colors duration-200 text-light hover:text-secondary cursor-pointer"
+              >
+                Servicios
+              </button>
+              <button
+                onClick={() => scrollToSection("paquetes")}
+                className="transition-colors duration-200 text-light hover:text-secondary cursor-pointer"
+              >
+                Paquetes
+              </button>
+              <Link
+                href={"/reservas"}
+                className="transition-colors duration-200 text-light hover:text-secondary"
+              >
+                Reservar Ahora
+              </Link>
             </div>
           </div>
           {/* Services */}

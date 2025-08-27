@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative flex items-center justify-center overflow-hidden min-h-dvh"
+      className="relative flex items-center justify-start overflow-hidden min-h-dvh"
     >
       {/* Imagen de fondo optimizada */}
       <Image
@@ -26,12 +26,12 @@ const Hero = () => {
           cascade={true}
           damping={0.2}
           direction="down"
-          className="max-w-5xl px-4 mx-auto text-center text-white text-shadow-md text-shadow-dark/50"
+          className="max-w-5xl px-4 mx-auto text-white text-shadow-md text-shadow-dark/50 md:ml-40"
         >
           <h1 className="mb-6 text-5xl font-semibold md:text-8xl font-hero">
             Tu escapada ideal comienza aquí
           </h1>
-          <h2 className="max-w-3xl mx-auto text-xl italic font-semibold leading-relaxed md:text-3xl font-secondary text-secondary">
+          <h2 className="max-w-3xl text-xl italic font-semibold leading-relaxed md:text-3xl font-secondary text-secondary">
             Confort, gastronomía y relax termal en pleno centro de Termas
           </h2>
         </FadeComponent>
